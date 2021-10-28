@@ -4,7 +4,7 @@ Survey
 .applyTheme("modern");
 
 var json = {
-title: "American History",
+title: "NutWhat",
 showProgressBar: "bottom",
 showTimerPanel: "top",
 maxTimeToFinishPage: 10,
@@ -45,7 +45,6 @@ pages: [
             }
         ]
     }, {
-        maxTimeToFinish: 15,
         questions: [
             {
                 type: "radiogroup",
@@ -56,6 +55,20 @@ pages: [
                     "The foundation of the British parliamentary system", "The Great Seal of the monarchs of England", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"
                 ],
                 correctAnswer: "The foundation of the British parliamentary system"
+            }
+        ]
+    }, {
+        maxTimeToFinish: 15,
+        questions: [
+            {
+                type: "radiogroup",
+                name: "magnacarta",
+                title: "Who is not included in Born2cook Team?",
+                choicesOrder: "random",
+                choices: [
+                    "hyeonpar", "seshin", "taehpark", "seungyel"
+                ],
+                correctAnswer: "seshin"
             }
         ]
     }
