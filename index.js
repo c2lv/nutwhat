@@ -148,6 +148,38 @@ pages: [
                 correctAnswer: "seshin"
             }
         ]
+    }, {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "q9",
+                title: "실온에 보관해야하는 음식이 아닌 것은?",
+                choicesOrder: "random",
+                choices: [
+                    "감자",
+                    "양파",
+                    "마요네즈",
+                    "버터"
+                ],
+                correctAnswer: "버터"
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "q10",
+                title: "다음 중 발효음식이 아닌 것은?",
+                choicesOrder: "random",
+                choices: [
+                    "김치",
+                    "매실",
+                    "된장",
+                    "두부"
+                ],
+                correctAnswer: "두부"
+            }
+        ]
     }
 ],
 completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
