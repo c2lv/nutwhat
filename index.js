@@ -101,11 +101,45 @@ pages: [
             }
         ]
     }, {
-        maxTimeToFinish: 15,
         questions: [
             {
                 type: "radiogroup",
                 name: "q6",
+                title: "감미료가 아닌 것은?",
+                choicesOrder: "random",
+                choices: [
+                    "아스파탐",
+                    "수크랄로스",
+                    "알룰로스",
+                    "스테비아, 스테비오사이드",
+                    "사카린",
+                    "글루타민산 나트륨"
+                ],
+                correctAnswer: "글루타민산 나트륨"
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "radiogroup",
+                name: "q7",
+                title: "육류에서 섭취하기 어려운 영양소는?",
+                choicesOrder: "random",
+                choices: [
+                    "단백질",
+                    "탄수화물",
+                    "지방",
+                    "나트륨"
+                ],
+                correctAnswer: "탄수화물"
+            }
+        ]
+    }, {
+        maxTimeToFinish: 15,
+        questions: [
+            {
+                type: "radiogroup",
+                name: "q8",
                 title: "Who is not included in Born2cook Team?",
                 choicesOrder: "random",
                 choices: [
