@@ -180,7 +180,7 @@ pages: [
         questions: [
             {
                 type: "html",
-                html: "You are about to start quiz by history. <br/>You have 5 minutes for the whole survey of 10 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+                html: "You are about to start quiz by nutrient. <br/>You have 5 minutes for the whole survey of 10 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
             }
         ]
     },
