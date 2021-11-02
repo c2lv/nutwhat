@@ -1,32 +1,13 @@
-// questions 순서도 랜덤으로 할 수 있으면 랜덤으로 하기
 // questions을 여러 개 만들고 그 중 몇 개만 랜덤으로 출제되도록 하기
-// Prev 버튼 추가하기
-// 시간 제한 조정하기
-// 세로 정렬
 // 시간 눈에 띄게(붉은 색으로 바꾼다거나...), 시간 글씨 예쁘게 또는 바 형태 등으로 모양 바꿔서 출력하기
 // 정답 제출 후에 인코딩?을 거쳐서 해시값으로 나오게, 그리고 그 값을 넣으면 어떤 문제에 어떤 답 제출했는지 알 수 있게
 
-Survey
-.StylesManager
-.applyTheme("modern");
-
-var json = {
-title: "NutWhat",
-showProgressBar: "bottom",
-showTimerPanel: "top",
-maxTimeToFinishPage: 10,
-maxTimeToFinish: 55,
-firstPageIsStarted: true,
-startSurveyText: "Start Quiz",
-pages: [
+function shuffle(array)
+{
+    array.sort(() => Math.random() - 0.5);
+}
+const qs = [
     {
-        questions: [
-            {
-                type: "html",
-                html: "You are about to start quiz by history. <br/>You have 10 seconds for every page and 55 seconds for the whole survey of 3 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
-            }
-        ]
-    }, {
         questions: [
             {
                 type: "radiogroup",
@@ -135,7 +116,6 @@ pages: [
             }
         ]
     }, {
-        maxTimeToFinish: 15,
         questions: [
             {
                 type: "radiogroup",
@@ -149,6 +129,37 @@ pages: [
             }
         ]
     }
+];
+shuffle(qs);
+
+Survey
+.StylesManager
+.applyTheme("modern");
+
+var json = {
+title: "NutWhat",
+showProgressBar: "bottom",
+showTimerPanel: "top",
+maxTimeToFinish: 300,
+firstPageIsStarted: true,
+startSurveyText: "Start Quiz",
+pages: [
+    {
+        questions: [
+            {
+                type: "html",
+                html: "You are about to start quiz by history. <br/>You have 5 minutes for the whole survey of 10 questions.<br/>Please click on <b>'Start Quiz'</b> button when you are ready."
+            }
+        ]
+    },
+        qs[0],
+        qs[1],
+        qs[2],
+        qs[3],
+        qs[4],
+        qs[5],
+        qs[6],
+        qs[7]
 ],
 completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
