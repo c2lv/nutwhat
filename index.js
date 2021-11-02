@@ -191,8 +191,10 @@ pages: [
         qs[4],
         qs[5],
         qs[6],
-        qs[7]
-],
+        qs[7],
+        qs[8],
+        qs[9]
+    ],
 completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
 
